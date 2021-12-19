@@ -47,11 +47,11 @@ const ForgotPassword = () => {
       >
         <Tabs variant="soft-rounded" colorScheme="black">
           <TabList mb="1em" d="flex" justifyContent="space-between">
-            <Tab fontFamily="cursive" color="white" width="50%">
+            <Tab color="white" width="50%">
               Forgot Password
             </Tab>
             <Link to="/">
-              <Tab fontFamily="cursive" color="white" width="50%">
+              <Tab color="white" width="50%">
                 Login
               </Tab>
             </Link>
