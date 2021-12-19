@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Login from "../components/authentication/Login";
 import Signup from "../components/authentication/Signup";
+import bv from "../components/icon2.png";
 import { useHistory } from "react-router-dom";
 function HomePage() {
   const history = useHistory();
@@ -32,7 +33,15 @@ function HomePage() {
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="Kalam" color="white">
-          BV Chat
+          <img
+            src={bv}
+            alt="logo.png"
+            width="60px"
+            style={{ position: "relative", right: "60px", top: "10px" }}
+          />
+          <span style={{ position: "relative", top: "-30px", left: "10px" }}>
+            Chat
+          </span>
         </Text>
       </Box>
       <Box
@@ -45,10 +54,10 @@ function HomePage() {
       >
         <Tabs variant="soft-rounded" colorScheme="black">
           <TabList mb="1em">
-            <Tab fontFamily="cursive" color="white" width="50%">
+            <Tab color="white" width="50%">
               Login
             </Tab>
-            <Tab fontFamily="cursive" color="white" width="50%">
+            <Tab color="white" width="50%">
               Sign Up
             </Tab>
           </TabList>

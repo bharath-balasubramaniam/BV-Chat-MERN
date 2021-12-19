@@ -107,12 +107,12 @@ const Login = () => {
       >
         Login
       </Button>
-      <Stack direction="row" spacing={6} align="stretch" paddingTop="7px">
+      <Stack direction="row" spacing={3} align="stretch" paddingTop="7px">
         <Button
           variant="solid"
           colorScheme="orange"
-          width="100%"
-          padding="0 42px"
+          width="80%"
+          padding="0 15px"
           onClick={() => {
             setEmail("guest@bv.in");
             setPassword("123123");
@@ -125,7 +125,7 @@ const Login = () => {
             variant="solid"
             colorScheme="red"
             width="100%"
-            padding="0 50px"
+            padding="0 25px"
             onClick={() => forgotHandler}
           >
             Forgot Password

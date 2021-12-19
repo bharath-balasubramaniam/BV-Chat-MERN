@@ -4,6 +4,7 @@ import { useToast } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/spinner";
 import { Avatar } from "@chakra-ui/avatar";
 import { Tooltip } from "@chakra-ui/react";
+import bv from "../icon.png";
 import {
   Drawer,
   DrawerBody,
@@ -70,7 +71,10 @@ const SideDrawer = () => {
         },
       };
 
-      const { data } = await axios.get(`https://bv-chat.herokuapp.com/user?search=${search}`, config);
+      const { data } = await axios.get(
+        `https://bv-chat.herokuapp.com/user?search=${search}`,
+        config
+      );
       setLoading(false);
       console.log(data);
       setSearchResult(data);
@@ -93,7 +97,11 @@ const SideDrawer = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post("https://bv-chat.herokuapp.com/chat", { userId }, config);
+      const { data } = await axios.post(
+        "https://bv-chat.herokuapp.com/chat",
+        { userId },
+        config
+      );
       if (!chats.find((c) => c.Id === data.id)) setChats([data, ...chats]);
       setSelectedChat(data);
       setLoadingChat(false);
@@ -128,7 +136,13 @@ const SideDrawer = () => {
           </Button>
         </Tooltip>
         <Text fontSize="2xl" fontFamily={"kalam"}>
-          BV Chat
+          <img
+            src={bv}
+            alt="logo.png"
+            width="40px"
+            style={{ position: "relative", left: "-50px", top: "10px" }}
+          ></img>
+          <span style={{ position: "relative", top: "-20px" }}>Chat</span>
         </Text>
         <div>
           <Menu>
