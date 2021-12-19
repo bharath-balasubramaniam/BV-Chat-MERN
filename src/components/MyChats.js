@@ -21,7 +21,10 @@ const MyChats = ({ fetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get("/chat", config);
+      const { data } = await axios.get(
+        "https://bv-chat.herokuapp.com/chat",
+        config
+      );
       setChats(data);
     } catch (error) {
       toast({

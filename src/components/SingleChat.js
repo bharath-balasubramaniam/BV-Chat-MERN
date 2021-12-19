@@ -50,7 +50,10 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         },
       };
       setLoading(true);
-      const { data } = await axios.get(`/message/${selectedChat._id}`, config);
+      const { data } = await axios.get(
+        `https://bv-chat.herokuapp.com/message/${selectedChat._id}`,
+        config
+      );
       setMessages(data);
       setLoading(false);
       socket.emit("join chat", selectedChat._id);
@@ -106,7 +109,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage(" ");
         const { data } = await axios.post(
-          "/message",
+          "https://bv-chat.herokuapp.com/message",
           {
             content: newMessage,
             chatId: selectedChat._id,

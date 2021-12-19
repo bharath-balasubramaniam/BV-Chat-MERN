@@ -70,7 +70,7 @@ const SideDrawer = () => {
         },
       };
 
-      const { data } = await axios.get(`/user?search=${search}`, config);
+      const { data } = await axios.get(`https://bv-chat.herokuapp.com/user?search=${search}`, config);
       setLoading(false);
       console.log(data);
       setSearchResult(data);
@@ -93,7 +93,7 @@ const SideDrawer = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post("/chat", { userId }, config);
+      const { data } = await axios.post("https://bv-chat.herokuapp.com/chat", { userId }, config);
       if (!chats.find((c) => c.Id === data.id)) setChats([data, ...chats]);
       setSelectedChat(data);
       setLoadingChat(false);

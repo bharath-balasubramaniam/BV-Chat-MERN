@@ -35,7 +35,7 @@ const Login = () => {
         },
       };
       const { data } = await axios.post(
-        "/user/login",
+        "https://bv-chat.herokuapp.com/user/login",
         { email, password },
         config
       );

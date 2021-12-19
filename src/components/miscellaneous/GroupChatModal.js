@@ -38,7 +38,7 @@ const GroupChatModal = ({ children }) => {
       const config = {
         headers: { Authorization: `Bearer ${user.token}` },
       };
-      const { data } = await axios.get(`/user?search=${search}`, config);
+      const { data } = await axios.get(`https://bv-chat.herokuapp.com/user?search=${search}`, config);
       console.log(data);
       setLoading(false);
       setSearchResult(data);
@@ -71,7 +71,7 @@ const GroupChatModal = ({ children }) => {
         },
       };
       const { data } = await axios.post(
-        "/chat/group",
+        "https://bv-chat.herokuapp.com/chat/group",
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),

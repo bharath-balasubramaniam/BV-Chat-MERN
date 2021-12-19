@@ -108,7 +108,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "/user",
+        "https://bv-chat.herokuapp.com/user",
         { name, email, password, pic },
         config
       );
