@@ -9,6 +9,7 @@ import {
   TabList,
   TabPanels,
 } from "@chakra-ui/react";
+import bv from "../components/icon2.png";
 import Forgot from "../components/authentication/Forgot";
 import { Link } from "react-router-dom";
 const ForgotPassword = () => {
@@ -25,7 +26,15 @@ const ForgotPassword = () => {
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="Kalam" color="white">
-          BV Chat
+          <img
+            src={bv}
+            alt="logo.png"
+            width="60px"
+            style={{ position: "relative", right: "60px", top: "10px" }}
+          />
+          <span style={{ position: "relative", top: "-30px", left: "10px" }}>
+            Chat
+          </span>
         </Text>
       </Box>
       <Box
