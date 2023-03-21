@@ -72,7 +72,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.get(
-        `https://bv-chat.herokuapp.com/user?search=${search}`,
+        `https://bv-chat.onrender.com/user?search=${search}`,
         config
       );
       setLoading(false);
@@ -98,7 +98,7 @@ const SideDrawer = () => {
         },
       };
       const { data } = await axios.post(
-        "https://bv-chat.herokuapp.com/chat",
+        "https://bv-chat.onrender.com/chat",
         { userId },
         config
       );
