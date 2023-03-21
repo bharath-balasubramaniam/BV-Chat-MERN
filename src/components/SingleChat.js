@@ -20,7 +20,7 @@ import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import ScrollableChat from "./ScrollableChat";
 
 import io from "socket.io-client";
-const ENDPOINT = "https://bv-chat.herokuapp.com";
+const ENDPOINT = "https://bv-chat.onrender.com/";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
