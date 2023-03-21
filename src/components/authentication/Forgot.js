@@ -49,7 +49,7 @@ const Forgot = () => {
         },
       };
       const { data } = await axios.post(
-        "https://bv-chat.herokuapp.com/user/forgotPassword",
+        "https://bv-chat.onrender.com/user/forgotPassword",
         { email },
         config
       );
