@@ -22,7 +22,7 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
       const { data } = await axios.get(
-        "https://bv-chat.herokuapp.com/chat",
+        "https://bv-chat.onrender.com/chat",
         config
       );
       setChats(data);
