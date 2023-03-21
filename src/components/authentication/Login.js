@@ -35,7 +35,7 @@ const Login = () => {
         },
       };
       const { data } = await axios.post(
-        "https://bv-chat.herokuapp.com/user/login",
+        "https://bv-chat.onrender.com/user/login",
         { email, password },
         config
       );
