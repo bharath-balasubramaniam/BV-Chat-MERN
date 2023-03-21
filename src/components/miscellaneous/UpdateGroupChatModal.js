@@ -50,7 +50,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
         },
       };
       const { data } = await axios.put(
-        "https://bv-chat.herokuapp.com/chat/groupremove",
+        "https://bv-chat.onrender.com/chat/groupremove",
         { chatId: selectedChat._id, userId: u1._id },
         config
       );
@@ -98,7 +98,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
         },
       };
       const { data } = await axios.put(
-        "https://bv-chat.herokuapp.com/chat/groupadd",
+        "https://bv-chat.onrender.com/chat/groupadd",
         { chatId: selectedChat._id, userId: u1._id },
         config
       );
@@ -126,7 +126,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
         },
       };
       const { data } = await axios.put(
-        "https://bv-chat.herokuapp.com/chat/rename",
+        "https://bv-chat.onrender.com/chat/rename",
         { chatId: selectedChat._id, chatName: groupChatName },
         config
       );
@@ -159,7 +159,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
         },
       };
       const { data } = await axios.get(
-        `https://bv-chat.herokuapp.com/user?search=${search}`,
+        `https://bv-chat.onrender.com/user?search=${search}`,
         config
       );
       console.log(data);
